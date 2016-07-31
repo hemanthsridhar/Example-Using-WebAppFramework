@@ -23,12 +23,10 @@ public class SearchPageObjects extends PageInitializer{
 	}
 	
 	PropertyFileReader propertyRead = new PropertyFileReader();
-	private String searchResults = propertyRead.propertiesReader(searchPageObjects, "searchResults");
-	private String searchButton = propertyRead.propertiesReader(searchPageObjects, "searchButton");
 
-	By searchResultsLocator = By.xpath(searchResults);
+	By searchResultsLocator = By.xpath(propertyRead.propertiesReader(searchPageObjects, "searchResultsLocator"));
 
-	By searchButtonLocator = By.xpath(searchButton);
+	By searchButtonLocator = By.xpath(propertyRead.propertiesReader(searchPageObjects, "searchButtonLocator"));
 	
 
 	@Step("click on search button")

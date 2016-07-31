@@ -23,9 +23,9 @@ public class LandingPageObjects extends PageInitializer{
 	
 	PropertyFileReader propertyRead = new PropertyFileReader();
 	
-	private String searchTextbox = propertyRead.propertiesReader(landingPageObjects, "searchTextboxLocator");
 	
-	By searchTextboxLocator = By.xpath(searchTextbox);
+	
+	By searchTextboxLocator = By.xpath(propertyRead.propertiesReader(landingPageObjects, "searchTextboxLocator"));
 
 	@Step("enter search text {0}")
 	public SearchPageObjects enterSearchText(String searchText) {
