@@ -10,6 +10,10 @@ import ru.yandex.qatools.allure.annotations.Step;
 
 public class SearchPageObjects extends PageInitializer{
 
+	/*
+	 * @author:hemanthsridhar
+	 */
+	
 	private WebDriver driver;
 	Waiting wait = new Waiting();
 	

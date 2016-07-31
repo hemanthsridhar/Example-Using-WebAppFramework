@@ -13,6 +13,9 @@ import ru.yandex.qatools.allure.annotations.TestCaseId;
 
 public class SearchModuleTest extends PageInitializer{
 	
+	/*
+	 * @author:hemanthsridhar
+	 */
 	
 	
 	@Features("Search Module")

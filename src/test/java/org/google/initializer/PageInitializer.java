@@ -5,6 +5,12 @@ import org.google.pageobjects.SearchPageObjects;
 
 public class PageInitializer extends CallApplication{
 	
+	
+	/*
+	 * @author:hemanthsridhar
+	 */
+	
+	
 	public String landingPageObjects = "resources/PageObjects/LandingPageObjects.properties";
 	
 	public String searchPageObjects = "resources/PageObjects/SearchPageObjects.properties";

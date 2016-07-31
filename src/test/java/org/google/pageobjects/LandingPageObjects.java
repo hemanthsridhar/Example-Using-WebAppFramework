@@ -9,6 +9,11 @@ import ru.yandex.qatools.allure.annotations.Step;
 
 public class LandingPageObjects extends PageInitializer{
 
+	/*
+	 * @author:hemanthsridhar
+	 */
+	
+	
 	private WebDriver driver;
 	
 	public LandingPageObjects(WebDriver driver) {
