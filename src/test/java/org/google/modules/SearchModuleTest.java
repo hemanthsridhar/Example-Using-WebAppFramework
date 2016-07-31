@@ -20,7 +20,7 @@ public class SearchModuleTest extends PageInitializer{
 	
 	@Features("Search Module")
 	@Stories(value = { "Search Text Scenarios" })
-	@Test(enabled=false,groups="regression",dataProvider="excelSheetDataRead",dataProviderClass=DataDrivenTestingFromExcel.class)
+	@Test(groups="regression",dataProvider="excelSheetDataRead",dataProviderClass=DataDrivenTestingFromExcel.class)
 	@TestCaseId("{0}")
     public void searchText_Scenarios(String testCaseId,String searchText)throws Exception {
 		 
@@ -29,7 +29,7 @@ public class SearchModuleTest extends PageInitializer{
 	
 	@Features("Search Module")
 	@Stories(value = { "Search Fail Scenarios" })
-	@Test(enabled=false,groups="regression")
+	@Test(groups="regression")
 	@TestCaseId("TC_002")
     public void failToAttachScreenshot()throws Exception {	 
 		Assert.assertTrue(false);
@@ -37,7 +37,7 @@ public class SearchModuleTest extends PageInitializer{
 	
 	@Features("Search Module")
 	@Stories(value = { "Data Provider Testing Via Single excel but multiple sheets" })
-	@Test(enabled=false,groups="regression",dataProvider="singleExcelMultipleSheets",dataProviderClass=DataDrivenTestingFromExcel.class)
+	@Test(groups="regression",dataProvider="singleExcelMultipleSheets",dataProviderClass=DataDrivenTestingFromExcel.class)
 	@TestCaseId("TC_003")
     public void loginTest1(String testCaseId,String userName,String password,String expectedNameOfTheUser)throws Exception {	 
 		System.out.println(testCaseId);
@@ -48,7 +48,7 @@ public class SearchModuleTest extends PageInitializer{
 	
 	@Features("Search Module")
 	@Stories(value = { "Data Provider Testing Via Single excel but multiple sheets with multiple test data" })
-	@Test(enabled=false,groups="regression",dataProvider="singleExcelMultipleSheets",dataProviderClass=DataDrivenTestingFromExcel.class)
+	@Test(groups="regression",dataProvider="singleExcelMultipleSheets",dataProviderClass=DataDrivenTestingFromExcel.class)
 	@TestCaseId("TC_004")
     public void loginTest2(String testCaseId,String userName,String password,String expectedNameOfTheUser)throws Exception {
 	
