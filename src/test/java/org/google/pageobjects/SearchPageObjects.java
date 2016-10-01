@@ -14,15 +14,18 @@ public class SearchPageObjects extends PageInitializer{
 	 * @author:hemanthsridhar
 	 */
 	
+	PropertyFileReader propertyRead = new PropertyFileReader();
+	
 	private WebDriver driver;
-	Waiting wait = new Waiting();
+	
 	
 	public SearchPageObjects(WebDriver driver) {
 		
 		this.driver = driver;
 	}
+	Waiting wait = new Waiting(driver);
 	
-	PropertyFileReader propertyRead = new PropertyFileReader();
+	
 
 	By searchResultsLocator = By.xpath(propertyRead.propertiesReader(searchPageObjects, "searchResultsLocator"));
 
