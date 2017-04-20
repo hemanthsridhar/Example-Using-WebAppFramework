@@ -2,9 +2,8 @@ package org.google.dataprovider;
 
 import java.io.File;
 import java.lang.reflect.Method;
-
-import org.framework.utils.ApplicationSetUpPropertyFile;
 import org.framework.utils.ExcelLibrary;
+import org.testng.ITestContext;
 import org.testng.annotations.DataProvider;
 
 public class DataDrivenTestingFromExcel {
@@ -23,10 +22,8 @@ public class DataDrivenTestingFromExcel {
 	}
 	
 	@DataProvider(name="singleExcelMultipleSheets",parallel = true)
-	public static Object[][] singleExcelMultipleSheets(Method methodName) throws Exception{
-		
-		ApplicationSetUpPropertyFile setUp = new ApplicationSetUpPropertyFile();
-		File file = new File("resources/"+setUp.getProductName()+"TestData.xlsx");
+	public static Object[][] singleExcelMultipleSheets(Method methodName,ITestContext context) throws Exception{
+		File file = new File("resources/"+context.getCurrentXmlTest().getParameter("Product Name")+"TestData.xlsx");
 		ExcelLibrary excel =  new ExcelLibrary(file.getAbsolutePath(),methodName.getName());
 		 Object data[][] =	excel.readFromExcelDataForTestNGDataProvider(file.getAbsolutePath(),methodName.getName());
 		return data;

@@ -1,9 +1,12 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Google Test" data-provider-thread-count="4" parallel="methods" thread-count="4">
+<suite name="Google Test" data-provider-thread-count="8" parallel="methods" thread-count="8">
  
 <test name="Regression Testing">
- <parameter name="browser" value="chrome"></parameter>
-  <parameter name="Node Url" value="http://hemanthip:5555/wd/hub"></parameter>
+    <parameter name="Product Name" value="Google"></parameter>
+    <parameter name="Application URL" value="http://www.google.com/"></parameter>
+    <parameter name="Platform" value="ANY"></parameter>
+ 	<parameter name="browser" value="chrome"></parameter>
+  	<parameter name="Remote Url" value="http://localhost:4444/wd/hub"></parameter>
     <classes>
         <class name="org.google.modules.SearchModuleTest" ></class>
     </classes>

@@ -29,6 +29,7 @@ public class LandingPageObjects extends PageInitializer{
 
 	@Step("enter search text {0}")
 	public SearchPageObjects enterSearchText(String searchText) {
+		
 		driver.findElement(searchTextboxLocator).click();
 		driver.findElement(searchTextboxLocator).sendKeys(searchText);
 		return searchPage();
